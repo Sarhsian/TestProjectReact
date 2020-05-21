@@ -12,9 +12,7 @@ let initialState = {
       newPostText: "lol"
   };
 
-
 const contentReducer = (state = initialState, action) => {
-    debugger;
     switch (action.type) {
         case ADD_POST:
             let newPost = {
