@@ -6,6 +6,7 @@ import DialogsContainer from './components/dialogs/DialogsContainer';
 import UsersContainer from './components/Users/UsersContainer';
 import ContentContainer from './components/content/ContentContainer';
 import HeaderContainer from './components/header/HeaderContainer';
+import Login from './components/Login/Login';
 
 const App = (props) => {
   return (
@@ -14,12 +15,17 @@ const App = (props) => {
         <HeaderContainer />
         <Nav />
         <div className="app-wrapper-content">
-          <Route path='/dialogs' 
-                render={ () => <DialogsContainer />} />
-          <Route path='/profile/:userId?' 
-                render={ () => <ContentContainer />} />
+          <Route path='/dialogs'
+            render={() => <DialogsContainer />} />
+
+          <Route path='/profile/:userId?'
+            render={() => <ContentContainer />} />
+
           <Route path='/users'
-                render={ () => <UsersContainer /> } />
+            render={() => <UsersContainer />} />
+
+          <Route path='/login'
+            render={() => <Login />} />
         </div>
       </div>
     </BrowserRouter>
